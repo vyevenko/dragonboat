@@ -21,12 +21,12 @@ import (
 	"sync/atomic"
 	"testing"
 
-	"github.com/lni/dragonboat/v3/client"
-	"github.com/lni/dragonboat/v3/config"
-	"github.com/lni/dragonboat/v3/internal/rsm"
-	pb "github.com/lni/dragonboat/v3/raftpb"
-	sm "github.com/lni/dragonboat/v3/statemachine"
 	"github.com/lni/goutils/random"
+	"github.com/vyevenko/dragonboat/v3/client"
+	"github.com/vyevenko/dragonboat/v3/config"
+	"github.com/vyevenko/dragonboat/v3/internal/rsm"
+	pb "github.com/vyevenko/dragonboat/v3/raftpb"
+	sm "github.com/vyevenko/dragonboat/v3/statemachine"
 )
 
 func TestIsTempError(t *testing.T) {

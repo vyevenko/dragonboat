@@ -1,10 +1,10 @@
 ![dragonboat](./docs/dragonboat.jpg)
 # Dragonboat - Go多组Raft库 #
-[![license](http://img.shields.io/badge/license-Apache2-blue.svg)](https://github.com/lni/dragonboat/blob/master/LICENSE)
-![Build status](https://github.com/lni/dragonboat/workflows/Test/badge.svg?branch=master)
-[![Go Report Card](https://goreportcard.com/badge/github.com/lni/dragonboat)](https://goreportcard.com/report/github.com/lni/dragonboat)
+[![license](http://img.shields.io/badge/license-Apache2-blue.svg)](https://github.com/vyevenko/dragonboat/blob/master/LICENSE)
+![Build status](https://github.com/vyevenko/dragonboat/workflows/Test/badge.svg?branch=master)
+[![Go Report Card](https://goreportcard.com/badge/github.com/vyevenko/dragonboat)](https://goreportcard.com/report/github.com/vyevenko/dragonboat)
 [![codecov](https://codecov.io/gh/lni/dragonboat/branch/master/graph/badge.svg)](https://codecov.io/gh/lni/dragonboat)
-[![Godoc](http://img.shields.io/badge/go-documentation-blue.svg)](https://godoc.org/github.com/lni/dragonboat)
+[![Godoc](http://img.shields.io/badge/go-documentation-blue.svg)](https://godoc.org/github.com/vyevenko/dragonboat)
 [![Join the chat at https://gitter.im/lni/dragonboat](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/lni/dragonboat?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 ## 项目新闻 ##
@@ -16,7 +16,7 @@ Dragonboat是一个高性能纯[Go](https://golang.org)语言实现的多组[Raf
 
 Raft这样的共识算法使得只要系统中的多数成员在线便可使得系统持续运行。比如，一个拥有5台服务器的Raft集群中即使有两台服务器故障依旧可以工作。它同时向客户端展现一个单机节点，始终提供强一致保证的数据访存。同时，所有在线的成员节点都可用来提供读操作，从而提供更高的读吞吐总和。
 
-所有Raft相关的技术难点都会由Dragonboat来承担，用户从而可以只关注他们各自的应用领域。Dragonboats[使用十分简便](docs/overview.CHS.md)，详细的[例程](https://github.com/lni/dragonboat-example)可使新用户在半小时内完全掌握它。
+所有Raft相关的技术难点都会由Dragonboat来承担，用户从而可以只关注他们各自的应用领域。Dragonboats[使用十分简便](docs/overview.CHS.md)，详细的[例程](https://github.com/vyevenko/dragonboat-example)可使新用户在半小时内完全掌握它。
 
 ## 功能 ##
 * 便于使用的可构建单组与多组Raft应用的纯Go语言API
@@ -69,30 +69,30 @@ Dragonboat是目前Github网站上最快的开源多组Raft实现。
 * x86_64/Linux, x86_64/MacOS或ARM64/Linux, Go 1.15或1.14
 
 ## 开始使用 ##
-__Master是用于开发的非稳定branch。生产环境请使用已发布版本__。如您使用v3.3.x版本，请参考v3.3.x版本的[README.CHS.md](https://github.com/lni/dragonboat/blob/release-3.3/README.CHS.md)。
+__Master是用于开发的非稳定branch。生产环境请使用已发布版本__。如您使用v3.3.x版本，请参考v3.3.x版本的[README.CHS.md](https://github.com/vyevenko/dragonboat/blob/release-3.3/README.CHS.md)。
 
 首先请确保Go 1.14或者更新的版本已被安装以获得[Go module](https://github.com/golang/go/wiki/Modules)支持。
 
-请在Go程序中import __github.com/lni/dragonboat/v3__这个包，同时把"github.com/lni/dragonboat/v3 v3.3.0"添加到您的Go应用的go.mod文件的__require__部分。
+请在Go程序中import __github.com/vyevenko/dragonboat/v3__这个包，同时把"github.com/vyevenko/dragonboat/v3 v3.3.0"添加到您的Go应用的go.mod文件的__require__部分。
 
 [Pebble](https://github.com/cockroachdb/pebble)是默认的用于存储Raft Log的存储引擎。RocksDB与自定义存储引擎的使用方法可参考[这里](docs/storage.CHS.md)。
 
-同时可参考[例程](https://github.com/lni/dragonboat-example)以了解更多Dragonboat使用信息。
+同时可参考[例程](https://github.com/vyevenko/dragonboat-example)以了解更多Dragonboat使用信息。
 
 ## 文档与资料 ##
 
 首先建议您阅读项目的[综述文档](docs/overview.CHS.md)与[运维注意事项](docs/devops.CHS.md)。
 
-欢迎阅读[godoc文档](https://godoc.org/github.com/lni/dragonboat)，[中文例程](https://github.com/lni/dragonboat-example)，[常见问题](https://github.com/lni/dragonboat/wiki/FAQ)，[CHANGELOG](CHANGELOG.md)和在线[讨论组](https://gitter.im/lni/dragonboat)。
+欢迎阅读[godoc文档](https://godoc.org/github.com/vyevenko/dragonboat)，[中文例程](https://github.com/vyevenko/dragonboat-example)，[常见问题](https://github.com/vyevenko/dragonboat/wiki/FAQ)，[CHANGELOG](CHANGELOG.md)和在线[讨论组](https://gitter.im/lni/dragonboat)。
 
 ## 中文例程 ##
-中文例程在[这里](https://github.com/lni/dragonboat-example)。
+中文例程在[这里](https://github.com/vyevenko/dragonboat-example)。
 
 ## 项目状态 ##
 Dragonboat适用于生产环境。
 
 ## 参与 ##
-报告bugs, 请提交一个[issue](https://github.com/lni/dragonboat/issues/new)。参与贡献改进及新功能, 请提交pull request并创建一个[issue](https://github.com/lni/dragonboat/issues/new)以便讨论与进度追踪。
+报告bugs, 请提交一个[issue](https://github.com/vyevenko/dragonboat/issues/new)。参与贡献改进及新功能, 请提交pull request并创建一个[issue](https://github.com/vyevenko/dragonboat/issues/new)以便讨论与进度追踪。
 
 ## 开源许可协议 ##
 本项目以Apache License Version 2.0授权开源，请参考LICENSE文件。

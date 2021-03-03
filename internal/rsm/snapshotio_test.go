@@ -21,9 +21,9 @@ import (
 	"math/rand"
 	"testing"
 
-	"github.com/lni/dragonboat/v3/internal/vfs"
-	pb "github.com/lni/dragonboat/v3/raftpb"
 	gvfs "github.com/lni/goutils/vfs"
+	"github.com/vyevenko/dragonboat/v3/internal/vfs"
+	pb "github.com/vyevenko/dragonboat/v3/raftpb"
 )
 
 const (

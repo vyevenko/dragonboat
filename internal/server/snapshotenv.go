@@ -24,8 +24,8 @@ import (
 	"sync"
 	"syscall"
 
-	"github.com/lni/dragonboat/v3/internal/fileutil"
-	"github.com/lni/dragonboat/v3/internal/vfs"
+	"github.com/vyevenko/dragonboat/v3/internal/fileutil"
+	"github.com/vyevenko/dragonboat/v3/internal/vfs"
 )
 
 var (

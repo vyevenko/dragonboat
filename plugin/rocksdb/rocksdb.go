@@ -18,11 +18,11 @@ Package rocksdb provides factory functions for creating RocksDB based Log DB.
 package rocksdb
 
 import (
-	"github.com/lni/dragonboat/v3/config"
-	"github.com/lni/dragonboat/v3/internal/logdb"
-	"github.com/lni/dragonboat/v3/internal/logdb/kv/rocksdb"
-	"github.com/lni/dragonboat/v3/internal/vfs"
-	"github.com/lni/dragonboat/v3/raftio"
+	"github.com/vyevenko/dragonboat/v3/config"
+	"github.com/vyevenko/dragonboat/v3/internal/logdb"
+	"github.com/vyevenko/dragonboat/v3/internal/logdb/kv/rocksdb"
+	"github.com/vyevenko/dragonboat/v3/internal/vfs"
+	"github.com/vyevenko/dragonboat/v3/raftio"
 )
 
 // Factory is the factory type for creating RocksDB based LogDB.

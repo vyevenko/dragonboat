@@ -15,9 +15,9 @@
 package raft
 
 import (
-	"github.com/lni/dragonboat/v3/internal/server"
-	"github.com/lni/dragonboat/v3/internal/settings"
-	pb "github.com/lni/dragonboat/v3/raftpb"
+	"github.com/vyevenko/dragonboat/v3/internal/server"
+	"github.com/vyevenko/dragonboat/v3/internal/settings"
+	pb "github.com/vyevenko/dragonboat/v3/raftpb"
 )
 
 var (

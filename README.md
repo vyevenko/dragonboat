@@ -1,10 +1,10 @@
 ![dragonboat](./docs/dragonboat.jpg)
 # Dragonboat - A Multi-Group Raft library in Go / [中文版](README.CHS.md) ##
-[![license](http://img.shields.io/badge/license-Apache2-blue.svg)](https://github.com/lni/dragonboat/blob/master/LICENSE)
-![Build status](https://github.com/lni/dragonboat/workflows/Test/badge.svg?branch=master)
-[![Go Report Card](https://goreportcard.com/badge/github.com/lni/dragonboat)](https://goreportcard.com/report/github.com/lni/dragonboat)
+[![license](http://img.shields.io/badge/license-Apache2-blue.svg)](https://github.com/vyevenko/dragonboat/blob/master/LICENSE)
+![Build status](https://github.com/vyevenko/dragonboat/workflows/Test/badge.svg?branch=master)
+[![Go Report Card](https://goreportcard.com/badge/github.com/vyevenko/dragonboat)](https://goreportcard.com/report/github.com/vyevenko/dragonboat)
 [![codecov](https://codecov.io/gh/lni/dragonboat/branch/master/graph/badge.svg)](https://codecov.io/gh/lni/dragonboat)
-[![Godoc](http://img.shields.io/badge/go-documentation-blue.svg)](https://godoc.org/github.com/lni/dragonboat)
+[![Godoc](http://img.shields.io/badge/go-documentation-blue.svg)](https://godoc.org/github.com/vyevenko/dragonboat)
 [![Join the chat at https://gitter.im/lni/dragonboat](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/lni/dragonboat?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 ## News ##
@@ -16,7 +16,7 @@ Dragonboat is a high performance multi-group [Raft](https://raft.github.io/) [co
 
 Consensus algorithms such as Raft provides fault-tolerance by alllowing a system continue to operate as long as the majority member servers are available. For example, a Raft cluster of 5 servers can make progress even if 2 servers fail. It also appears to clients as a single entity with strong data consistency always provided. All Raft replicas can be used to handle read requests for aggregated read throughput.
 
-Dragonboat handles all technical difficulties associated with Raft to allow users to just focus on their application domains. It is also very easy to use, our step-by-step [examples](https://github.com/lni/dragonboat-example) can help new users to master it in half an hour.
+Dragonboat handles all technical difficulties associated with Raft to allow users to just focus on their application domains. It is also very easy to use, our step-by-step [examples](https://github.com/vyevenko/dragonboat-example) can help new users to master it in half an hour.
 
 ## Features ##
 * Easy to use pure-Go APIs for building Raft based applications
@@ -68,27 +68,27 @@ As visualized below, Stop-the-World pauses caused by Go1.11's GC are sub-millise
 * x86_64/Linux, x86_64/MacOS or ARM64/Linux, Go 1.15 or 1.14
 
 ## Getting Started ##
-__Master is our unstable branch for development. Please use the latest released versions for any production purposes.__ For Dragonboat v3.3.x, please follow the instructions in v3.3.x's [README.md](https://github.com/lni/dragonboat/blob/release-3.3/README.md). 
+__Master is our unstable branch for development. Please use the latest released versions for any production purposes.__ For Dragonboat v3.3.x, please follow the instructions in v3.3.x's [README.md](https://github.com/vyevenko/dragonboat/blob/release-3.3/README.md). 
 
 Go 1.14 or above with [Go module](https://github.com/golang/go/wiki/Modules) support is required.
 
-To use Dragonboat, make sure to import the package __github.com/lni/dragonboat/v3__. Also add "github.com/lni/dragonboat/v3 v3.3.0" to the __require__ section of your project's go.mod file.
+To use Dragonboat, make sure to import the package __github.com/vyevenko/dragonboat/v3__. Also add "github.com/vyevenko/dragonboat/v3 v3.3.0" to the __require__ section of your project's go.mod file.
 
 By default, [Pebble](https://github.com/cockroachdb/pebble) is used for storing Raft Logs in Dragonboat. RocksDB and other storage engines are also supported, more info [here](docs/storage.md).
 
-You can also follow our [examples](https://github.com/lni/dragonboat-example) on how to use Dragonboat. 
+You can also follow our [examples](https://github.com/vyevenko/dragonboat-example) on how to use Dragonboat. 
 
 ## Documents ##
-[FAQ](https://github.com/lni/dragonboat/wiki/FAQ), [docs](https://godoc.org/github.com/lni/dragonboat), step-by-step [examples](https://github.com/lni/dragonboat-example), [DevOps doc](docs/devops.md), [CHANGELOG](CHANGELOG.md) and [online chat](https://gitter.im/lni/dragonboat) are available.
+[FAQ](https://github.com/vyevenko/dragonboat/wiki/FAQ), [docs](https://godoc.org/github.com/vyevenko/dragonboat), step-by-step [examples](https://github.com/vyevenko/dragonboat-example), [DevOps doc](docs/devops.md), [CHANGELOG](CHANGELOG.md) and [online chat](https://gitter.im/lni/dragonboat) are available.
 
 ## Examples ##
-Dragonboat examples are [here](https://github.com/lni/dragonboat-example).
+Dragonboat examples are [here](https://github.com/vyevenko/dragonboat-example).
 
 ## Status ##
 Dragonboat is production ready.
 
 ## Contributing ##
-For reporting bugs, please open an [issue](https://github.com/lni/dragonboat/issues/new). For contributing improvements or new features, please send in the pull request.
+For reporting bugs, please open an [issue](https://github.com/vyevenko/dragonboat/issues/new). For contributing improvements or new features, please send in the pull request.
 
 ## License ##
 Dragonboat is licensed under the Apache License Version 2.0. See LICENSE for details.

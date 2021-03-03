@@ -21,9 +21,9 @@ import (
 
 	"github.com/lni/goutils/logutil"
 
-	"github.com/lni/dragonboat/v3/config"
-	"github.com/lni/dragonboat/v3/internal/server"
-	"github.com/lni/dragonboat/v3/raftio"
+	"github.com/vyevenko/dragonboat/v3/config"
+	"github.com/vyevenko/dragonboat/v3/internal/server"
+	"github.com/vyevenko/dragonboat/v3/raftio"
 )
 
 var (

@@ -32,12 +32,12 @@ import (
 	"github.com/lni/goutils/netutil"
 	"github.com/lni/goutils/stringutil"
 
-	"github.com/lni/dragonboat/v3/internal/id"
-	"github.com/lni/dragonboat/v3/internal/settings"
-	"github.com/lni/dragonboat/v3/internal/vfs"
-	"github.com/lni/dragonboat/v3/logger"
-	"github.com/lni/dragonboat/v3/raftio"
-	pb "github.com/lni/dragonboat/v3/raftpb"
+	"github.com/vyevenko/dragonboat/v3/internal/id"
+	"github.com/vyevenko/dragonboat/v3/internal/settings"
+	"github.com/vyevenko/dragonboat/v3/internal/vfs"
+	"github.com/vyevenko/dragonboat/v3/logger"
+	"github.com/vyevenko/dragonboat/v3/raftio"
+	pb "github.com/vyevenko/dragonboat/v3/raftpb"
 )
 
 var (
@@ -297,7 +297,7 @@ type NodeHostConfig struct {
 	// MutualTLS defines whether to use mutual TLS for authenticating servers
 	// and clients. Insecure communication is used when MutualTLS is set to
 	// False.
-	// See https://github.com/lni/dragonboat/wiki/TLS-in-Dragonboat for more
+	// See https://github.com/vyevenko/dragonboat/wiki/TLS-in-Dragonboat for more
 	// details on how to use Mutual TLS.
 	MutualTLS bool
 	// CAFile is the path of the CA certificate file. This field is ignored when
