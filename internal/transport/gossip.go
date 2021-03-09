@@ -15,6 +15,7 @@
 package transport
 
 import (
+	"io/ioutil"
 	"net"
 	"strconv"
 	"time"
@@ -138,9 +139,13 @@ func newGossipManager(nhid string,
 		cfg.PushPullInterval = nhConfig.Expert.GossipPushPullInterval
 	}
 	if nhConfig.Expert.GossipToTheDeadTime > 0 {
-		plog.Infof("gossip to teh dead time set to %s",
+		plog.Infof("gossip to the dead time set to %s",
 			nhConfig.Expert.GossipToTheDeadTime)
 		cfg.GossipToTheDeadTime = nhConfig.Expert.GossipToTheDeadTime
+	}
+	if nhConfig.Expert.DiscardMemberlistLogMessages {
+		plog.Infof("gossip [hashicorp/memberlist] log messages discarded")
+		cfg.LogOutput = ioutil.Discard
 	}
 	bindAddr, bindPort, err := parseAddress(nhConfig.Gossip.BindAddress)
 	if err != nil {

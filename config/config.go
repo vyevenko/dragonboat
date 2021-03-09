@@ -225,7 +225,7 @@ func (c *Config) Validate() error {
 type NodeHostConfig struct {
 	// DeploymentID is used to determine whether two NodeHost instances belong to
 	// the same deployment and thus allowed to communicate with each other. This
-	// helps to prvent accidentially misconfigured NodeHost instances to cause
+	// helps to prevent accidentally misconfigured NodeHost instances to cause
 	// data corruption errors by sending out of context messages to unrelated
 	// Raft nodes.
 	// For a particular dragonboat based application, you can set DeploymentID
@@ -445,7 +445,7 @@ type NodeHostConfig struct {
 	Gossip GossipConfig
 	// Expert contains options for expert users who are familiar with the internals
 	// of Dragonboat. Users are recommended not to use this field unless
-	// absoloutely necessary. It is important to note that any change to this field
+	// absolutely necessary. It is important to note that any change to this field
 	// may cause an existing instance unable to restart, it may also cause negative
 	// performance impacts.
 	Expert ExpertConfig
@@ -918,6 +918,8 @@ type ExpertConfig struct {
 	// GossipToTheDeadTime is the interval after which a node has died that
 	// we will still try to gossip to it. This gives it a chance to refute.
 	GossipToTheDeadTime time.Duration
+	// DiscardMemberlistLogMessages discards messages for gossip
+	DiscardMemberlistLogMessages bool
 }
 
 // GossipConfig contains configurations for the gossip service. Gossip service
